@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				2BAA792D1D7946EB00EDF849 /* main.cpp */,
-				2BAA79341D79470C00EDF849 /* fixed_vector.cpp */,
 				2BAA79351D79470C00EDF849 /* fixed_vector.hpp */,
+				2BAA79341D79470C00EDF849 /* fixed_vector.cpp */,
 			);
 			path = fixed_vector;
 			sourceTree = "<group>";

@@ -23,6 +23,7 @@ public:
     auto operator =(fixed_vector const & other) -> fixed_vector &
     {
         std::copy(other.begin(), other.end(), begin());
+        return  *this;
     }
     
     template <typename U, std::size_t osize>
@@ -35,6 +36,7 @@ public:
     auto operator =(fixed_vector<U, osize> const & other) -> fixed_vector &
     {
         std::copy(other.begin(), other.begin() + std::min(size, osize), begin());
+        return  *this;
     }
     
     auto begin() -> iterator
