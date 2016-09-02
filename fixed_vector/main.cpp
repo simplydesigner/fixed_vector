@@ -72,7 +72,7 @@ auto operator >>(std::istream & stream, logable & logable) -> std::istream &
 auto generic_implementation() -> void
 {
     fixed_vector<logable, 2> v1;
-    
+
     auto first = std::istream_iterator<logable> { std::cin };
     std::cout << "constructed first iterator" << std::endl;
     
@@ -83,9 +83,9 @@ auto generic_implementation() -> void
     std::cout << "completed copying to vector" << std::endl;
     
 //    std::copy(v1.cbegin(), v1.cend(), std::ostream_iterator<logable> { std::cout, " " });
-    
+//
     std::cout << std::endl;
-    
+//
     std::cin.clear();
     clearerr(stdin);
 }
@@ -125,18 +125,18 @@ auto no_generic_implementation() -> void
 }
 
 int main(int argc, const char * argv[]) {
-
+    
     generic_implementation();
     std::cout << logable::count << std::endl;
     logable::clear_count();
     
-//    generic_implementation_with_rvalue();
-//    std::cout << logable::count << std::endl;
-//    logable::clear_count();
-//    
-//    no_generic_implementation();
-//    std::cout << logable::count << std::endl;
-//    logable::clear_count();
+    generic_implementation_with_rvalue();
+    std::cout << logable::count << std::endl;
+    logable::clear_count();
+    
+    no_generic_implementation();
+    std::cout << logable::count << std::endl;
+    logable::clear_count();
     
     
     return 0;
